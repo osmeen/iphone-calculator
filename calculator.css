@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px;
+    background-image: url(images//main-background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+}
+.calculator{
+    background-color: black;
+    border-radius: 40px;
+    border-color: white;
+    border: solid;
+    color: white;
+    height: 610px;
+    width: 320px;
+    padding: 18px;
+    position: relative;
+}
+.top-container{
+    height: 120px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.clock{
+    color: rgb(204, 203, 203) ;
+    font-size: 13px;
+    font-weight: 600;
+}
+.screenshot{
+    width: 70px;
+}
+.value{
+    font-size: 70px;
+    font-weight: 100;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.buttons-container{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    /* This means that their will be 5 rows having equal space btn them*/
+    grid-template-columns: repeat(4,1fr);
+     /* This means that their will be 5 columns having equal space btn them*/
+    grid-gap: 9px;
+
+}
+.button {
+    font-size: 25px;
+    font-weight: 500;
+    height: 60px;
+    width:60px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover{
+    background: rgb(75, 75, 75); 
+}
+.button.function{
+    color: black;
+    background-color: #a5a5a5;
+}
+.button.function:hover{
+    background-color:  #c4c3c3;
+}
+.button.operator{
+    color: black;
+    background-color: #f1a33c;
+}
+.button.operator:hover{
+    background-color: #f09114;
+}
+.button.number-0{
+    width: 150px;
+    border-radius: 30px;
+    justify-content: flex-start;
+    padding-left:25px;
+    grid-column: 1/3;
+    /*this means that the 0-button will take the space of the first column and 
+    and end right before the third column*/
+}
+.buttom{
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+}
